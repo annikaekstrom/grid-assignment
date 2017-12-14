@@ -1,0 +1,153 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-color: #f3e1e1;
+}
+
+.a {
+  background-size: cover;
+  padding: 0;
+  margin: 0;
+  object-position: center center;
+}
+
+.curly {
+  background-size: cover;
+  background-position: 50%;
+}
+
+.and {
+  background-size: cover;
+  background-position: center;
+}
+img.curly {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 100%;
+  width: 100%;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+}
+img.and {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 102%;
+  width: 102%;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+}
+ul {
+    margin: 0;
+  }
+
+li {
+    list-style: none;
+    position: relative;
+  }
+.grid-container{
+  display: grid;
+  grid-template-columns: repeat(6, 15vw);
+  grid-auto-rows: 15vw;
+  grid-gap: 15px;
+  margin: 20px;
+  padding: 0;
+}
+.grid-container li {
+  background-color: #52529d;
+  color: white;
+  padding: 5px;
+  text-align: center;
+}
+
+.grid-container li:first-child {
+  position: relative;
+  background-color: white;
+  text-align: left;
+  padding-left: 20px;
+  color: black;
+    }
+h1 {
+  margin-bottom: 30px;
+  font-size: 30px;
+}
+p {
+  font-size: 12px;
+  position: absolute;
+  bottom: 0;
+}
+h2 {
+  font-size: 15px;
+}
+
+.grid-container li:nth-child(5),
+.grid-container li:nth-child(9) {
+    position: relative;
+    background-color: black;
+    color: white;
+}
+
+.grid-container li:nth-child(6),
+.grid-container li:nth-child(8),
+.grid-container li:nth-child(7),
+.grid-container li:nth-child(11) {
+  position: relative;
+  background-color: white;
+  color: black;
+}
+
+.grid-container li:nth-child(10) {
+    position: relative;
+    background-color: white;
+    color: black;
+    letter-spacing: 5px;
+    text-align: left;
+    margin-top: -10px;
+}
+
+.text-container {
+      position: absolute;
+    }
+
+.tall2 {
+      grid-row: span 2;
+    }
+.wide2 {
+      grid-column: span 2;
+    }
+
+    @media(max-width: 600px){
+      .grid-container {
+        grid-template-columns: repeat(2, 60vw);
+        grid-auto-rows: 60vw;
+    }
+    p {
+      font-size: 20px;
+    }
+    h1 {
+      font-size: 50px;
+    }
+    h2 {
+      font-size: 30px;
+    }
+  }
+
+  @media (min-width: 601px) and (max-width: 900px) {
+    .grid-container {
+      grid-template-columns: repeat(2, 40vw);
+      grid-auto-rows: 40vw;
+  }
+  p {
+    font-size: 25px;
+  }
+  h1 {
+    font-size: 60px;
+  }
+  h2 {
+    font-size: 30px;
+  }
+}
